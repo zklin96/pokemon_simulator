@@ -1,0 +1,105 @@
+{
+  "run_name": "hybrid_20260103_183004",
+  "start_time": "2026-01-03T18:30:04.439178",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "distill",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/test_hybrid",
+    "use_enhanced_selfplay": false,
+    "use_mixed_precision": false,
+    "distill_dims": "(128, 64)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 100000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 20
+  },
+  "metrics": {
+    "distill_target_dims": [
+      {
+        "value": "(128, 64)",
+        "step": null
+      }
+    ],
+    "distill_temperature": [
+      {
+        "value": 4.0,
+        "step": null
+      }
+    ],
+    "distill_alpha": [
+      {
+        "value": 0.7,
+        "step": null
+      }
+    ],
+    "distill_epochs": [
+      {
+        "value": 20,
+        "step": null
+      }
+    ],
+    "distill_num_samples": [
+      {
+        "value": 50000,
+        "step": null
+      }
+    ],
+    "distill_teacher_params": [
+      {
+        "value": 3468403,
+        "step": null
+      }
+    ],
+    "distill_student_params": [
+      {
+        "value": 97553,
+        "step": null
+      }
+    ],
+    "distill_compression_ratio": [
+      {
+        "value": 35.554037292548664,
+        "step": null
+      }
+    ],
+    "distill_training_time_seconds": [
+      {
+        "value": 16.265599012374878,
+        "step": null
+      }
+    ],
+    "distill_final_loss": [
+      {
+        "value": 0.7293799212392496,
+        "step": null
+      }
+    ],
+    "distill_final_policy_loss": [
+      {
+        "value": 0.6669509572033979,
+        "step": null
+      }
+    ],
+    "distill_final_value_loss": [
+      {
+        "value": 0.20809653485003782,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 16.275036811828613,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/test_hybrid/distill/20260103_183004/distilled_model.pt",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T18:30:20.714894"
+}

@@ -1,0 +1,69 @@
+{
+  "run_name": "hybrid_20260103_182535",
+  "start_time": "2026-01-03T18:25:35.920881",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "ppo_sim",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/test_hybrid",
+    "use_enhanced_selfplay": false,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 500,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 20
+  },
+  "metrics": {
+    "ppo_sim_timesteps": [
+      {
+        "value": 500,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_curriculum": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_masking": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_mixed_precision": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_training_time_seconds": [
+      {
+        "value": 2.876523971557617,
+        "step": null
+      }
+    ],
+    "ppo_sim_fps": [
+      {
+        "value": 173.82090500335846,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 3.847817897796631,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/test_hybrid/ppo_sim/20260103_182535/maskable_ppo.zip",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T18:25:39.768978"
+}

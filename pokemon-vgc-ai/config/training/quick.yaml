@@ -1,0 +1,62 @@
+# Quick Training Configuration (for testing)
+
+name: quick
+
+# Imitation learning settings
+imitation:
+  epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  val_split: 0.1
+  patience: 3
+  
+  winner_weight: 1.5
+  loser_weight: 0.5
+  
+  scheduler:
+    type: cosine
+    eta_min: 0.000001
+
+# PPO settings
+ppo:
+  total_timesteps: 10000
+  learning_rate: 0.0003
+  n_steps: 512
+  batch_size: 64
+  n_epochs: 5
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+
+# Self-play settings
+self_play:
+  iterations: 10
+  population_size: 5
+  matches_per_iteration: 10
+  hall_of_fame_size: 3
+  elo_k_factor: 32
+  initial_elo: 1500
+  
+  opponent_selection:
+    current: 0.6
+    recent: 0.3
+    hall_of_fame: 0.1
+
+# Reward shaping
+rewards:
+  win: 10.0
+  lose: -10.0
+  ko: 2.0
+  faint: -2.0
+  hp_diff_scale: 0.1
+  turn_penalty: -0.01
+
+# Checkpointing
+checkpoint:
+  save_freq: 1000
+  keep_last_n: 3
+

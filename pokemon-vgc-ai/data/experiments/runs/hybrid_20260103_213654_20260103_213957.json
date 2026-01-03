@@ -1,0 +1,129 @@
+{
+  "run_name": "hybrid_20260103_213654",
+  "start_time": "2026-01-03T21:36:54.154675",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "ppo_sim,self_play",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/verify_showdown",
+    "use_enhanced_selfplay": true,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 2000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 2
+  },
+  "metrics": {
+    "ppo_sim_timesteps": [
+      {
+        "value": 2000,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_curriculum": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_masking": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_mixed_precision": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_training_time_seconds": [
+      {
+        "value": 2.5313382148742676,
+        "step": null
+      }
+    ],
+    "ppo_sim_fps": [
+      {
+        "value": 790.09592169387,
+        "step": null
+      }
+    ],
+    "self_play_iterations": [
+      {
+        "value": 2,
+        "step": null
+      }
+    ],
+    "self_play_population_size": [
+      {
+        "value": 8,
+        "step": null
+      }
+    ],
+    "self_play_use_enhanced": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "self_play_use_real_battles": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "self_play_hall_of_fame_size": [
+      {
+        "value": 10,
+        "step": null
+      }
+    ],
+    "self_play_diversity_bonus": [
+      {
+        "value": 0.1,
+        "step": null
+      }
+    ],
+    "self_play_best_elo": [
+      {
+        "value": 1555.9063167319225,
+        "step": null
+      }
+    ],
+    "self_play_hof_entries": [
+      {
+        "value": 4,
+        "step": null
+      }
+    ],
+    "self_play_final_diversity": [
+      {
+        "value": 1.0,
+        "step": null
+      }
+    ],
+    "self_play_training_time_seconds": [
+      {
+        "value": 180.25719380378723,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 183.591726064682,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/verify_showdown/ppo_sim/20260103_213654/maskable_ppo.zip",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T21:39:57.747258"
+}

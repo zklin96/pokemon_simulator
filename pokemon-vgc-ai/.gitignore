@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data
+data/raw/
+data/processed/
+data/models/
+*.db
+
+# Environment
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pokemon Showdown (if cloned inside project)
+pokemon-showdown/
+
+# Logs
+logs/
+*.log
+
+# Model files
+*.pt
+*.pth
+*.onnx
+

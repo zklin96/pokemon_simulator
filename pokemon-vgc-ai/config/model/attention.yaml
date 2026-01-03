@@ -1,0 +1,34 @@
+# Attention-Based Model Configuration
+
+name: attention
+
+# Network architecture
+architecture:
+  type: attention
+  pokemon_embed_dim: 64
+  hidden_dim: 256
+  num_heads: 4
+  num_layers: 2
+  dropout: 0.1
+
+# Pokemon embeddings
+embeddings:
+  num_species: 1000
+  num_abilities: 300
+  num_items: 200
+  num_moves: 900
+  species_dim: 64
+  ability_dim: 32
+  item_dim: 32
+  move_dim: 48
+
+# Input/Output dimensions
+state_dim: ${state.dim}
+action_dim: ${action.dim}
+
+# Attention settings
+attention:
+  use_positional: false
+  use_causal_mask: false
+  pooling: mean  # mean, cls, max
+

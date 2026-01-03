@@ -1,0 +1,221 @@
+{
+  "run_name": "hybrid_20260103_183034",
+  "start_time": "2026-01-03T18:30:34.915645",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "imitation,ppo_sim,self_play,distill",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/full_test",
+    "use_enhanced_selfplay": true,
+    "use_mixed_precision": false,
+    "distill_dims": "(128, 64)",
+    "imitation_epochs": 2,
+    "ppo_sim_timesteps": 1000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 3
+  },
+  "metrics": {
+    "imitation_epochs": [
+      {
+        "value": 2,
+        "step": null
+      }
+    ],
+    "imitation_batch_size": [
+      {
+        "value": 256,
+        "step": null
+      }
+    ],
+    "ppo_sim_timesteps": [
+      {
+        "value": 1000,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_curriculum": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_masking": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_mixed_precision": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_training_time_seconds": [
+      {
+        "value": 2.3149750232696533,
+        "step": null
+      }
+    ],
+    "ppo_sim_fps": [
+      {
+        "value": 431.97010332647454,
+        "step": null
+      }
+    ],
+    "self_play_iterations": [
+      {
+        "value": 3,
+        "step": null
+      }
+    ],
+    "self_play_population_size": [
+      {
+        "value": 8,
+        "step": null
+      }
+    ],
+    "self_play_use_enhanced": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "self_play_use_real_battles": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "self_play_hall_of_fame_size": [
+      {
+        "value": 10,
+        "step": null
+      }
+    ],
+    "self_play_diversity_bonus": [
+      {
+        "value": 0.1,
+        "step": null
+      }
+    ],
+    "self_play_best_elo": [
+      {
+        "value": 1546.818182995284,
+        "step": null
+      }
+    ],
+    "self_play_hof_entries": [
+      {
+        "value": 4,
+        "step": null
+      }
+    ],
+    "self_play_final_diversity": [
+      {
+        "value": 1.0,
+        "step": null
+      }
+    ],
+    "self_play_training_time_seconds": [
+      {
+        "value": 0.10297703742980957,
+        "step": null
+      }
+    ],
+    "distill_target_dims": [
+      {
+        "value": "(128, 64)",
+        "step": null
+      }
+    ],
+    "distill_temperature": [
+      {
+        "value": 4.0,
+        "step": null
+      }
+    ],
+    "distill_alpha": [
+      {
+        "value": 0.7,
+        "step": null
+      }
+    ],
+    "distill_epochs": [
+      {
+        "value": 20,
+        "step": null
+      }
+    ],
+    "distill_num_samples": [
+      {
+        "value": 50000,
+        "step": null
+      }
+    ],
+    "distill_teacher_params": [
+      {
+        "value": 3468403,
+        "step": null
+      }
+    ],
+    "distill_student_params": [
+      {
+        "value": 97553,
+        "step": null
+      }
+    ],
+    "distill_compression_ratio": [
+      {
+        "value": 35.554037292548664,
+        "step": null
+      }
+    ],
+    "distill_training_time_seconds": [
+      {
+        "value": 14.5886390209198,
+        "step": null
+      }
+    ],
+    "distill_final_loss": [
+      {
+        "value": 0.7109563061777426,
+        "step": null
+      }
+    ],
+    "distill_final_policy_loss": [
+      {
+        "value": 0.6564136570205494,
+        "step": null
+      }
+    ],
+    "distill_final_value_loss": [
+      {
+        "value": 0.18180882094465955,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 57.365413188934326,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/full_test/imitation/20260103_183034/best_model.pt",
+      "artifact_path": null
+    },
+    {
+      "local_path": "data/models/full_test/ppo_sim/20260103_183034/maskable_ppo.zip",
+      "artifact_path": null
+    },
+    {
+      "local_path": "data/models/full_test/distill/20260103_183034/distilled_model.pt",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T18:31:32.281430"
+}

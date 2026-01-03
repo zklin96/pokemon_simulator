@@ -1,0 +1,26 @@
+# Imitation Learning Model Configuration
+
+name: imitation
+
+# Network architecture
+architecture:
+  type: mlp  # mlp, attention
+  hidden_dims: [512, 256, 128]
+  dropout: 0.1
+  activation: relu
+  use_layer_norm: true
+
+# Input/Output dimensions (inherited from default)
+state_dim: ${state.dim}
+action_dim: ${action.dim}
+
+# Weight initialization
+init:
+  method: orthogonal
+  gain: 1.414  # sqrt(2) for ReLU
+
+# Regularization
+regularization:
+  weight_decay: 0.0001
+  dropout: 0.1
+

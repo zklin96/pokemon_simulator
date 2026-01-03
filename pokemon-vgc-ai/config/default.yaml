@@ -1,0 +1,49 @@
+# VGC AI Default Configuration
+# This file contains the base configuration for all components
+
+defaults:
+  - model: imitation
+  - training: full
+  - data: vgc_bench
+  - _self_
+
+# Project paths
+paths:
+  root: ${hydra:runtime.cwd}
+  data: ${paths.root}/data
+  models: ${paths.data}/models
+  raw_data: ${paths.data}/raw
+  processed_data: ${paths.data}/processed
+  logs: ${paths.data}/logs
+
+# Battle format settings
+battle:
+  format: gen9vgc2024regg
+  team_size: 6
+  bring_size: 4  # VGC brings 4 of 6
+
+# State encoding
+state:
+  dim: 620
+  pokemon_features: 50
+  field_features: 20
+  num_pokemon: 6
+
+# Action space
+action:
+  dim: 144
+  actions_per_slot: 12
+  num_moves: 4
+  num_switch_targets: 4
+
+# Random seed for reproducibility
+seed: 42
+
+# Logging
+logging:
+  level: INFO
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+
+# Hardware
+device: auto  # auto, cpu, cuda, mps
+

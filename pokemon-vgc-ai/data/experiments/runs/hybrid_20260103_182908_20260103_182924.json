@@ -1,0 +1,34 @@
+{
+  "run_name": "hybrid_20260103_182908",
+  "start_time": "2026-01-03T18:29:08.281254",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "distill",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/test_hybrid",
+    "use_enhanced_selfplay": false,
+    "use_mixed_precision": false,
+    "distill_dims": "(128, 64)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 100000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 20
+  },
+  "metrics": {
+    "distill_error": [
+      {
+        "value": 1,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 16.368607997894287,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [],
+  "end_time": "2026-01-03T18:29:24.650400"
+}

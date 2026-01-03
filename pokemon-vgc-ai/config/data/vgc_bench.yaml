@@ -1,0 +1,49 @@
+# VGC-Bench Data Configuration
+
+name: vgc_bench
+
+# Data source
+source:
+  type: huggingface
+  dataset_id: cameronangliss/vgc-battle-logs
+  
+# Available files
+files:
+  - name: logs-gen9vgc2024regg.json
+    format: VGC 2024 Reg G
+    battles: 21480
+  - name: logs-gen9vgc2024regh.json
+    format: VGC 2024 Reg H
+    battles: 30000
+  - name: logs-gen9vgc2025regg.json
+    format: VGC 2025 Reg G
+    battles: 50000
+
+# Default file to use
+default_file: logs-gen9vgc2024regg.json
+
+# Processing settings
+processing:
+  max_battles: null  # null = all
+  batch_size: 1000
+  num_workers: 4
+  
+# Storage format
+storage:
+  format: parquet  # json, parquet
+  compression: snappy
+  
+# Trajectories output
+trajectories:
+  # Full dataset (21,480 battles, 42,960 trajectories, 321,454 transitions)
+  output_dir: ${paths.processed_data}/trajectories_full
+  include_losing: true
+  
+# Data validation
+validation:
+  check_state_dims: true
+  check_action_range: true
+  check_reward_range: true
+  min_turns: 1
+  max_turns: 50
+

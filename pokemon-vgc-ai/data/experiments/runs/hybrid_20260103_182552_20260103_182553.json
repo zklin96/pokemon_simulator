@@ -1,0 +1,34 @@
+{
+  "run_name": "hybrid_20260103_182552",
+  "start_time": "2026-01-03T18:25:52.632308",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "self_play",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/test_hybrid",
+    "use_enhanced_selfplay": true,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 100000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 3
+  },
+  "metrics": {
+    "self_play_error": [
+      {
+        "value": 1,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 0.8579690456390381,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [],
+  "end_time": "2026-01-03T18:25:53.490781"
+}

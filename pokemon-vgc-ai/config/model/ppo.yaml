@@ -1,0 +1,32 @@
+# PPO Model Configuration
+
+name: ppo
+
+# Network architecture
+architecture:
+  type: mlp
+  hidden_dims: [256, 128]
+  shared_encoder: true
+  separate_value_head: true
+
+# Input/Output dimensions
+state_dim: ${state.dim}
+action_dim: ${action.dim}
+
+# PPO-specific settings
+ppo:
+  clip_range: 0.2
+  clip_range_vf: null  # null = no clipping
+  target_kl: null
+  normalize_advantage: true
+
+# Value function
+value:
+  hidden_dims: [256, 128]
+  loss_coef: 0.5
+
+# Policy
+policy:
+  hidden_dims: [256, 128]
+  log_std_init: 0.0
+

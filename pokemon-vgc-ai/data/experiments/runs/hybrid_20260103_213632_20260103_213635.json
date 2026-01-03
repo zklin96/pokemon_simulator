@@ -1,0 +1,69 @@
+{
+  "run_name": "hybrid_20260103_213632",
+  "start_time": "2026-01-03T21:36:32.176654",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "ppo_sim",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/verify_simple",
+    "use_enhanced_selfplay": false,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 2000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 20
+  },
+  "metrics": {
+    "ppo_sim_timesteps": [
+      {
+        "value": 2000,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_curriculum": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_masking": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "ppo_sim_use_mixed_precision": [
+      {
+        "value": false,
+        "step": null
+      }
+    ],
+    "ppo_sim_training_time_seconds": [
+      {
+        "value": 2.4065582752227783,
+        "step": null
+      }
+    ],
+    "ppo_sim_fps": [
+      {
+        "value": 831.0623601312365,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 3.4643678665161133,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/verify_simple/ppo_sim/20260103_213632/maskable_ppo.zip",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T21:36:35.641395"
+}

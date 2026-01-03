@@ -1,0 +1,45 @@
+{
+  "run_name": "hybrid_20260103_182451",
+  "start_time": "2026-01-03T18:24:51.975202",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "imitation",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/test_hybrid",
+    "use_enhanced_selfplay": false,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 1,
+    "ppo_sim_timesteps": 100000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 20
+  },
+  "metrics": {
+    "imitation_epochs": [
+      {
+        "value": 1,
+        "step": null
+      }
+    ],
+    "imitation_batch_size": [
+      {
+        "value": 256,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 21.981853008270264,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "local_path": "data/models/test_hybrid/imitation/20260103_182451/best_model.pt",
+      "artifact_path": null
+    }
+  ],
+  "end_time": "2026-01-03T18:25:13.957920"
+}

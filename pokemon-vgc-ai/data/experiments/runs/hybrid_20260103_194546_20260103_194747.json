@@ -1,0 +1,88 @@
+{
+  "run_name": "hybrid_20260103_194546",
+  "start_time": "2026-01-03T19:45:46.046324",
+  "tags": {},
+  "description": null,
+  "params": {
+    "stages": "self_play",
+    "data_path": "data/processed/trajectories_batched",
+    "output_base": "data/models/evolve_teams_test3",
+    "use_enhanced_selfplay": true,
+    "use_mixed_precision": false,
+    "distill_dims": "(256, 128)",
+    "imitation_epochs": 20,
+    "ppo_sim_timesteps": 100000,
+    "ppo_real_timesteps": 10000,
+    "self_play_iterations": 2
+  },
+  "metrics": {
+    "self_play_iterations": [
+      {
+        "value": 2,
+        "step": null
+      }
+    ],
+    "self_play_population_size": [
+      {
+        "value": 8,
+        "step": null
+      }
+    ],
+    "self_play_use_enhanced": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "self_play_use_real_battles": [
+      {
+        "value": true,
+        "step": null
+      }
+    ],
+    "self_play_hall_of_fame_size": [
+      {
+        "value": 10,
+        "step": null
+      }
+    ],
+    "self_play_diversity_bonus": [
+      {
+        "value": 0.1,
+        "step": null
+      }
+    ],
+    "self_play_best_elo": [
+      {
+        "value": 1522.0918714943964,
+        "step": null
+      }
+    ],
+    "self_play_hof_entries": [
+      {
+        "value": 4,
+        "step": null
+      }
+    ],
+    "self_play_final_diversity": [
+      {
+        "value": 1.0,
+        "step": null
+      }
+    ],
+    "self_play_training_time_seconds": [
+      {
+        "value": 121.70104503631592,
+        "step": null
+      }
+    ],
+    "total_pipeline_time_seconds": [
+      {
+        "value": 121.70407295227051,
+        "step": null
+      }
+    ]
+  },
+  "artifacts": [],
+  "end_time": "2026-01-03T19:47:47.750914"
+}
