@@ -264,6 +264,34 @@ RESTRICTED_POKEMON = [
 # Safe Pokemon pool (Pokemon with defined movesets, excluding restricted)
 VGC_SAFE_POOL = [p for p in POKEMON_MOVESETS.keys() if p not in RESTRICTED_POKEMON]
 
+# Alias for compatibility
+VGC_POKEMON_POOL = VGC_SAFE_POOL
+
+# ============================================================================
+# COMMON VGC ITEMS
+# ============================================================================
+VGC_ITEMS = [
+    "Choice Scarf", "Choice Band", "Choice Specs",
+    "Focus Sash", "Assault Vest", "Life Orb",
+    "Leftovers", "Sitrus Berry", "Lum Berry",
+    "Safety Goggles", "Covert Cloak", "Clear Amulet",
+    "Eviolite", "Rocky Helmet", "Expert Belt",
+    "Booster Energy", "Wide Lens", "Muscle Band",
+    "Wise Glasses", "Scope Lens", "Weakness Policy",
+    "White Herb", "Mental Herb", "Power Herb",
+    "Mirror Herb", "Loaded Dice", "Punching Glove",
+    "Throat Spray", "Adrenaline Orb", "Blunder Policy",
+]
+
+# ============================================================================
+# TERA TYPES
+# ============================================================================
+TERA_TYPES = [
+    "Normal", "Fire", "Water", "Electric", "Grass", "Ice",
+    "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug",
+    "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy",
+]
+
 # Verify all Pokemon in movesets have abilities defined
 _missing_abilities = [p for p in POKEMON_MOVESETS if p not in POKEMON_ABILITIES]
 if _missing_abilities:
